@@ -1,10 +1,11 @@
-ul {
+.posts-ul {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1300px;
-  min-height: 100%;
-  margin: 20px auto;
+  // min-height: 100%;
+  font-size: 0.7rem;
+  padding: 10px;
+  margin: 10px auto;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -12,12 +13,25 @@ ul {
   text-transform: uppercase;
   flex-wrap: wrap;
   @include mq(768px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1300px;
+    min-height: 100%;
+    font-size: 1rem;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
+    flex-wrap: wrap;
   }
 
-  li {
-    width: 60%;
+  .posts-li {
+    width: 90%;
     height: 20px;
-    margin: 10px;
+    margin: 10px 0;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -25,6 +39,15 @@ ul {
     border: 1px solid grey;
     border-radius: 5px;
     @include mq(768px) {
+      width: 60%;
+      height: 20px;
+      margin: 10px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid grey;
+      border-radius: 5px;
     }
   }
 }

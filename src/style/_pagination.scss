@@ -1,0 +1,48 @@
+.paginationWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .pagination-ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1300px;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    @include mq(768px) {
+    }
+
+    .pagination-li {
+      width: 60%;
+      height: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      @include mq(768px) {
+      }
+
+      a {
+        text-decoration: none;
+        width: 10px;
+        height: 20px;
+        padding: 20px;
+        margin: 5px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mq(768px) {
+        }
+      }
+    }
+  }
+}
