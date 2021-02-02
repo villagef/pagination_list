@@ -1,6 +1,8 @@
-import './App.css';
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import './style/style.css';
+
+import Posts from './components/Posts'
 
 function App() {
   const API = 'https://jsonplaceholder.typicode.com/posts';
@@ -17,19 +19,9 @@ function App() {
 
   
 
-  // useEffect(() => {
-  //   localStorage.setItem('data', JSON.stringify(data))
-  // }, [data]);
-
-  // console.log(data);
-  
-
-
-  
-
   return (
-    <div className="App">
-
+    <div className="mainWrapper">
+      <Posts data={data} />
     </div>
   );
 }
