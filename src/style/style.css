@@ -9,6 +9,21 @@
 body {
   font-family: "Lato", Arial, sans-serif;
   color: #272e3d;
+  overflow: hidden;
+}
+
+.mainWrapper {
+  width: 100vw;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #dd5837;
+}
+
+.postsWrapper {
+  width: 60%;
+  height: 100vh;
 }
 
 .posts-ul {
@@ -19,10 +34,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  width: 90%;
   font-size: 0.7rem;
-  padding: 10px;
-  margin: 10px auto;
+  padding: 0px 10px;
+  margin: 0px auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -34,6 +49,7 @@ body {
   text-transform: uppercase;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background-color: #21315c;
 }
 
 @media only screen and (min-width: 768px) {
@@ -45,14 +61,13 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 100%;
-    max-width: 1300px;
+    width: 90%;
     min-height: 100%;
-    font-size: 1rem;
-    margin: 20px auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    font-size: 0.9rem;
+    margin: 0px auto;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -61,45 +76,66 @@ body {
     text-transform: uppercase;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    border-radius: 10px;
   }
 }
 
 .posts-ul .posts-li {
-  width: 90%;
-  height: 20px;
+  width: 95%;
+  height: auto;
   margin: 10px 0;
-  padding: 20px;
+  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid grey;
+  background-color: white;
   border-radius: 5px;
 }
 
 @media only screen and (min-width: 768px) {
   .posts-ul .posts-li {
-    width: 60%;
-    height: 20px;
+    width: 95%;
+    min-height: 20px;
     margin: 10px;
-    padding: 20px;
+    padding: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     border: 1px solid grey;
     border-radius: 5px;
   }
+}
+
+.posts-ul .posts-li button {
+  margin: 0 5px;
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bolder;
+}
+
+.posts-ul .posts-li button:first-of-type {
+  background-color: #087ba8;
+  color: whitesmoke;
+}
+
+.posts-ul .posts-li button:last-of-type {
+  background-color: #dd5837;
+  margin-right: 10px;
 }
 
 .paginationWrapper {
@@ -124,7 +160,7 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1400px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -134,19 +170,20 @@ body {
   list-style: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 10px 10px;
 }
 
 .paginationWrapper .pagination-ul .pagination-li {
-  width: 60%;
+  width: 70%;
   height: 20px;
   margin: 10px;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -157,6 +194,7 @@ body {
 
 .paginationWrapper .pagination-ul .pagination-li a {
   text-decoration: none;
+  display: inline-block;
   width: 10px;
   height: 20px;
   padding: 20px;
@@ -172,5 +210,91 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #fff;
+}
+
+.paginationWrapper .pagination-ul .pagination-li a:hover {
+  background-color: #ddd;
+  font-size: 1.2rem;
+}
+
+.manipulateWrapper {
+  width: 40%;
+  height: auto;
+  min-height: 400px;
+  background-color: #dd5837;
+}
+
+.manipulateWrapper form {
+  width: calc(100% - 60px);
+  height: auto;
+  min-height: 300px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid grey;
+  margin: 100px 30px 0px 30px;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.manipulateWrapper button {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #dd5837;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.col-1,
+.col-2 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0;
+}
+
+.col-1 label,
+.col-2 label {
+  font-size: 1.3rem;
+  width: 20%;
+}
+
+.col-1 textarea,
+.col-2 textarea {
+  width: 80%;
+  border-radius: 10px;
+  padding: 5px;
+  border: none;
+  border: 1px solid grey;
+}
+
+.col-1 .body-txt,
+.col-2 .body-txt {
+  height: auto;
+  min-height: 100px;
 }
 /*# sourceMappingURL=style.css.map */

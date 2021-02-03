@@ -2,9 +2,6 @@ import React from 'react'
 
 export default function Pagination({postsOnPage, postsNumber, paginate}) {
     const totalPages = [];
-    
-    console.log(postsOnPage / postsNumber.length);
-    
 
     for(let i=1; i <= Math.ceil(postsOnPage / postsNumber.length); i++){
         totalPages.push(i);

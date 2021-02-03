@@ -1,0 +1,62 @@
+.manipulateWrapper {
+  width: 40%;
+  height: auto;
+  min-height: 400px;
+  background-color: rgb(221, 88, 55);
+
+  form {
+    width: calc(100% - 60px);
+    height: auto;
+    min-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    margin: 100px 30px 0px 30px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: white;
+  }
+
+  button {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(221, 88, 55);
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.col-1,
+.col-2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+
+  label {
+    font-size: 1.3rem;
+    width: 20%;
+  }
+
+  textarea {
+    width: 80%;
+    // height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    border: 1px solid grey;
+  }
+
+  .body-txt {
+    height: auto;
+    min-height: 100px;
+  }
+}

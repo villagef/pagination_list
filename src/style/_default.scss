@@ -18,4 +18,12 @@ $FontColor: rgb(39, 46, 61);
 body {
   font-family: $FontFamily;
   color: $FontColor;
+  overflow: hidden;
+}
+
+.mainWrapper {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  background-color: rgb(221, 88, 55);
 }
