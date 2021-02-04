@@ -1,11 +1,15 @@
 .manipulateWrapper {
-  width: 40%;
+  width: 100%;
   height: auto;
+  margin: 20px 0;
   min-height: 400px;
-  background-color: rgb(221, 88, 55);
+  @include mq(768px) {
+    width: 40%;
+    height: 100vh;
+  }
 
   form {
-    width: calc(100% - 60px);
+    width: 95%;
     height: auto;
     min-height: 300px;
     margin: 0 auto;
@@ -14,17 +18,23 @@
     justify-content: center;
     align-items: center;
     border: 1px solid grey;
-    margin: 100px 30px 0px 30px;
-    padding: 30px;
-    border-radius: 20px;
+    margin-top: 120px;
+    padding: 10px;
+    border-radius: 10px;
     background-color: white;
+    @include mq(768px) {
+      width: calc(100% - 60px);
+      margin: 100px 30px 0px 30px;
+      padding: 30px;
+      border-radius: 20px;
+    }
   }
 
   button {
     width: 100px;
     height: 40px;
     border-radius: 20px;
-    background-color: rgb(221, 88, 55);
+    background-color: $ColorMain;
     border: none;
     text-transform: uppercase;
     font-weight: bold;
@@ -37,26 +47,43 @@
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 10px 0;
+  @include mq(768px) {
+    flex-direction: row;
+  }
 
   label {
     font-size: 1.3rem;
-    width: 20%;
+    width: 100%;
+    text-align: center;
+    @include mq(768px) {
+      width: 20%;
+      font-size: 1rem;
+    }
   }
 
   textarea {
-    width: 80%;
+    width: 100%;
     // height: 40px;
     border-radius: 10px;
     padding: 5px;
     border: none;
     border: 1px solid grey;
+    font-size: 1.4rem;
+    @include mq(768px) {
+      width: 80%;
+    }
   }
 
   .body-txt {
     height: auto;
     min-height: 100px;
+    width: 100%;
+    @include mq(768px) {
+      width: 80%;
+    }
   }
 }

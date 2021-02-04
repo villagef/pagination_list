@@ -1,16 +1,15 @@
 .paginationWrapper {
-  width: 100%;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
 
   .pagination-ul {
     display: flex;
     flex-direction: row;
     width: 100%;
     max-width: 1400px;
-    justify-content: center;
-    align-items: center;
     list-style: none;
     flex-wrap: wrap;
     padding: 10px 10px;
@@ -18,16 +17,17 @@
     }
 
     .pagination-li {
-      width: 70%;
+      width: 100%;
       height: 20px;
       margin: 10px;
       border-radius: 5px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       flex-wrap: wrap;
       margin-bottom: 30px;
       @include mq(768px) {
+        justify-content: flex-end;
       }
 
       a {

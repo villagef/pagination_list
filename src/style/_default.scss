@@ -2,6 +2,7 @@
 
 $FontFamily: "Lato", Arial, sans-serif;
 $FontColor: rgb(39, 46, 61);
+$ColorMain: rgb(221, 88, 55);
 
 @mixin mq($size) {
   @media only screen and (min-width: $size) {
@@ -18,12 +19,16 @@ $FontColor: rgb(39, 46, 61);
 body {
   font-family: $FontFamily;
   color: $FontColor;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .mainWrapper {
   width: 100vw;
   min-height: 100vh;
   display: flex;
-  background-color: rgb(221, 88, 55);
+  flex-direction: column;
+  background-color: $ColorMain;
+  @include mq(768px) {
+    flex-direction: row;
+  }
 }
