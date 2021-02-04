@@ -3,14 +3,14 @@ import React from 'react'
 export default function Pagination({postsOnPage, postsNumber, paginate}) {
     const totalPages = [];
 
-    for(let i=1; i <= Math.ceil(postsOnPage / postsNumber.length); i++){
+    for(let i=1; i <= Math.ceil(postsOnPage / postsNumber); i++){
         totalPages.push(i);
 
         if(i > Math.ceil(postsOnPage / postsNumber.length)) {
             break;
         }
     }
-    
+
     return (
         <>
             <div className="paginationWrapper">

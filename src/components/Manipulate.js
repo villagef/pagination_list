@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from 'react'
 
-export default function Manipulate({data, onePost, setOnePost}) {
+export default function Manipulate({data, setData, onePost, setOnePost}) {
     const [editedPost, setEditedPost] = useState([]);
 
-    useEffect(() => {
-        setOnePost(editedPost)
-        },[])
+
+    const handlePostUpdate = (id, updatedPost) => {
+        setData(data.map((post) => (post.id === id ? updatedPost : post)))
+      }
+
 
     const handleInputChange = (e) => {
       const { name, value } = e.target;
@@ -14,16 +16,12 @@ export default function Manipulate({data, onePost, setOnePost}) {
     }
 
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         setOnePost(editedPost);
-
+        handlePostUpdate(onePost.id, onePost)
     }
 
-
-    console.log(onePost);
-    
     return (
         <div className="manipulateWrapper">
             {
