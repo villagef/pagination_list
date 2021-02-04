@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Pagination from './Pagination';
 import Manipulate from './Manipulate';
 
@@ -13,11 +13,9 @@ export default function Posts({data, onPageData, setData, postsOnPage, postsNumb
           })
     }
     
-    // const handleDelete = (id) => {
-    //     setData(data.filter((d) => d.id !== id))
-    //     // localStorage.removeItem('data', onePost)
-    // }
-
+    const handleDelete = (id) => {
+        setData(data.filter((d) => d.id !== id))
+    }
 
     return (
         <>
@@ -30,9 +28,9 @@ export default function Posts({data, onPageData, setData, postsOnPage, postsNumb
                     onPageData.map(d => (
                         <li className="posts-li" key={d.id}>
                             <button onClick={() => handleShow(d.id)}>Show</button>
-                            {/* <button onClick={() => {
+                            <button onClick={() => {
                                 handleDelete(d.id)
-                            }}>Delete</button> */}
+                            }}>Delete</button>
                             <p>{d.title}</p>
                         </li>
                     ))

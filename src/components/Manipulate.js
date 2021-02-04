@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 
 export default function Manipulate({data, setData, onePost, setOnePost}) {
     const [editedPost, setEditedPost] = useState([]);
@@ -17,7 +17,6 @@ export default function Manipulate({data, setData, onePost, setOnePost}) {
 
 
     const handleSubmit = (e) => {
-        e.preventDefault();
         setOnePost(editedPost);
         handlePostUpdate(onePost.id, onePost)
     }
