@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-export default function Manipulate({data, setData, onePost, setOnePost}) {
+export default function Manipulate({data, setData, onePost, setOnePost, isActive, setIsActive}) {
     const [editedPost, setEditedPost] = useState([]);
 
 
@@ -19,6 +19,7 @@ export default function Manipulate({data, setData, onePost, setOnePost}) {
     const handleSubmit = (e) => {
         setOnePost(editedPost);
         handlePostUpdate(onePost.id, onePost)
+        setIsActive(false)
     }
 
     return (
@@ -26,6 +27,7 @@ export default function Manipulate({data, setData, onePost, setOnePost}) {
             {
                 <>
                 <form
+                    className={isActive ? 'active' : 'notActive'}
                     onSubmit={handleSubmit}
                     >
                     <div className="col-1">
@@ -48,7 +50,9 @@ export default function Manipulate({data, setData, onePost, setOnePost}) {
                             onChange={handleInputChange}
                         />
                     </div>
-                    <button type="submit">Update</button>
+                    <div className="btn-wrapper">
+                     <button type="submit">Update</button>
+                    </div>
                 </form>
                 </>
             }

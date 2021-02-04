@@ -4,11 +4,13 @@ import Manipulate from './Manipulate';
 
 export default function Posts({data, onPageData, setData, postsOnPage, postsNumber, paginate}) {
     const [onePost, setOnePost] = useState([]);
+    const [isActive, setIsActive] = useState(false);
     
     const handleShow = (id) => {
           data.map((d) => {
                if(id == d.id) {
                    setOnePost(d)
+                   setIsActive(true)
                }
           })
     }
@@ -19,7 +21,7 @@ export default function Posts({data, onPageData, setData, postsOnPage, postsNumb
 
     return (
         <>
-        <Manipulate data={data} setData={setData} onePost={onePost}  setOnePost={setOnePost}/>
+        <Manipulate data={data} setData={setData} onePost={onePost}  setOnePost={setOnePost} isActive={isActive} setIsActive={setIsActive}/>
         <div className="postsWrapper">
             <Pagination postsOnPage={postsOnPage} postsNumber={postsNumber} paginate={paginate}/>
             <ul className="posts-ul">

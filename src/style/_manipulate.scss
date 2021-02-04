@@ -1,11 +1,18 @@
 .manipulateWrapper {
   width: 100%;
-  height: auto;
+  min-height: 100px;
   margin: 20px 0;
-  min-height: 400px;
   @include mq(768px) {
     width: 40%;
     height: 100vh;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .notActive {
+    display: none;
   }
 
   form {
@@ -29,16 +36,21 @@
       border-radius: 20px;
     }
   }
+  .btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
-  button {
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: $ColorMain;
-    border: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
+    button {
+      width: 100px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: $ColorMain;
+      border: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+    }
   }
 }
 
