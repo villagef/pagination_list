@@ -10,6 +10,7 @@ body {
   font-family: "Lato", Arial, sans-serif;
   color: #272e3d;
   overflow-x: hidden;
+  background-color: #dd5837;
 }
 
 .mainWrapper {
@@ -56,11 +57,11 @@ body {
           flex-direction: column;
   width: 100%;
   font-size: 0.9rem;
-  padding: 0px 10px;
-  margin: 0px auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 20px 10px;
+  margin: 20px auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -75,7 +76,7 @@ body {
 @media only screen and (min-width: 768px) {
   .posts-ul {
     width: 90%;
-    min-height: 100%;
+    margin: 0 auto;
     border-radius: 10px;
   }
 }
@@ -136,6 +137,7 @@ body {
 
 .paginationWrapper {
   width: 100vw;
+  height: auto;
   position: absolute;
   top: 0;
   left: 0;
@@ -162,15 +164,14 @@ body {
 
 .paginationWrapper .pagination-ul .pagination-li {
   width: 100%;
-  height: 20px;
   margin: 10px;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -216,13 +217,12 @@ body {
 .manipulateWrapper {
   width: 100%;
   min-height: 100px;
-  margin: 20px 0;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 768px) {
   .manipulateWrapper {
     width: 40%;
-    height: 100vh;
   }
 }
 
@@ -235,10 +235,10 @@ body {
 }
 
 .manipulateWrapper form {
-  width: 95%;
+  width: 100%;
   height: auto;
   min-height: 300px;
-  margin: 0 auto;
+  margin: 20px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
