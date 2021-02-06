@@ -8,7 +8,7 @@ export default function Posts({data, onPageData, setData, postsOnPage, postsNumb
     
     const handleShow = (id) => {
           data.map((d) => {
-               if(id == d.id) {
+               if(id === d.id) {
                    setOnePost(d)
                    setIsActive(true)
                }

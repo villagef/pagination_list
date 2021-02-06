@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function Pagination({postsOnPage, postsNumber, paginate}) {
     const totalPages = [];
@@ -10,6 +10,7 @@ export default function Pagination({postsOnPage, postsNumber, paginate}) {
             break;
         }
     }
+    
 
     return (
         <>
@@ -19,7 +20,7 @@ export default function Pagination({postsOnPage, postsNumber, paginate}) {
                         <li className="pagination-li">
                             {
                                 totalPages.map(n => (
-                                <a onClick={() => paginate(n)} key={n} href="!#">
+                                <a onClick={() => paginate(n)} key={n} href="# ">
                                     {n}
                                 </a>
                                 ))
